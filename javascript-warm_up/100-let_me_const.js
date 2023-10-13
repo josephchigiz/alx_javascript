@@ -1,4 +1,1 @@
-exports.changeValue() => {
-    myVar = 333
-    return myVar
-};
+myVar =333;
