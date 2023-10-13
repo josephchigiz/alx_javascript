@@ -1,4 +1,4 @@
-const add = (num1, num2) => {
+exports.add = (num1, num2) => {
     return num1 + num2;
 };
 
@@ -6,5 +6,3 @@ const add = (num1, num2) => {
 //     let sum = num1 + num2;
 //     return sum;
 // }
-
-module.exports = add;
