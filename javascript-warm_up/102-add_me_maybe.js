@@ -5,7 +5,7 @@
 // }
 function addMeMaybe(number, theFunction) {
     let nb = parseInt(number); nb++;
-    if (nb > 0) {
+    if (typeof nb === 'number') {
         theFunction(nb);
     }
 }
