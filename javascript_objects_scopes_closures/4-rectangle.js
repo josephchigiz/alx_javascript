@@ -33,32 +33,6 @@ class Rectangle {
             this.height *= 2;
         }
     }
-
-
-
-    // rotate() {
-    //     if (this.width && this.height) {
-    //         for (let i = 0; i < this.width; i++) {
-    //             let row = "";
-    //             for (let j = 0; j < this.height; j++) {
-    //                 row += "X";
-    //             }
-    //             console.log(row);
-    //         }
-    //     }
-    // }
-
-    // double() {
-    //     if (this.width && this.height) {
-    //         for (let i = 0; i < (2*this.width); i++) {
-    //             let row = "";
-    //             for (let j = 0; j < (2*this.height); j++) {
-    //                 row += "X";
-    //             }
-    //             console.log(row);
-    //         }
-    //     }
-    // }
 }
 
 module.exports = Rectangle;
