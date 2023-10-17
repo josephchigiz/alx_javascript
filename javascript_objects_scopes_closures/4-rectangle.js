@@ -17,31 +17,48 @@ class Rectangle {
                 console.log(row);
             }
         }
-    };
+    }
 
     rotate() {
         if (this.width && this.height) {
-            for (let i = 0; i < this.width; i++) {
-                let row = "";
-                for (let j = 0; j < this.height; j++) {
-                    row += "X";
-                }
-                console.log(row);
-            }
+            const tempValue = this.width;
+            this.width = this.height;
+            this.height = tempValue;
         }
-    };
+    }
 
     double() {
         if (this.width && this.height) {
-            for (let i = 0; i < (2*this.width); i++) {
-                let row = "";
-                for (let j = 0; j < (2*this.height); j++) {
-                    row += "X";
-                }
-                console.log(row);
-            }
+            this.width *= 2;
+            this.height *= 2;
         }
-    };
+    }
+
+
+
+    // rotate() {
+    //     if (this.width && this.height) {
+    //         for (let i = 0; i < this.width; i++) {
+    //             let row = "";
+    //             for (let j = 0; j < this.height; j++) {
+    //                 row += "X";
+    //             }
+    //             console.log(row);
+    //         }
+    //     }
+    // }
+
+    // double() {
+    //     if (this.width && this.height) {
+    //         for (let i = 0; i < (2*this.width); i++) {
+    //             let row = "";
+    //             for (let j = 0; j < (2*this.height); j++) {
+    //                 row += "X";
+    //             }
+    //             console.log(row);
+    //         }
+    //     }
+    // }
 }
 
 module.exports = Rectangle;
