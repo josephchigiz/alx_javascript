@@ -7,7 +7,7 @@ class Rectangle {
         };
     }
 
-    print = function (x) {
+    print() {
         if (this.width && this.height) {
             for (let i = 0; i < this.height; i++) {
                 let row = "";
