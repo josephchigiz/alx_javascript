@@ -11,13 +11,14 @@ request.get(url, function(error, response, body) {
         return;
     }
     // this script prints No. of movies he was in
-    const films= JSON.parse(body).results;
-    const id = "18";
+    // const films= JSON.parse(body).results;
+    const films= JSON.parse(body);
+    const charID = "18";
     let count = 0;
 
     //Iterate film by film
-    for (const film of films) {
-        if (film.characters.includes(`https://swapi-api.alx-tools.com/api/people/${id}/`)) {
+    for (const film of films.results) {
+        if (film.characters.includes(charID)) {
         count++;
         }
     }
