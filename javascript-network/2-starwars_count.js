@@ -72,16 +72,24 @@ request.get(apiUrl, function(error, response, body) {
         return;
     }
 
-    const films = JSON.parse(body).results;
+    const data = JSON.parse(body);
     let count = 0;
 
     // Iterate through the films and count those where Wedge Antilles is present
-    for (const film of films) {
-        // Check if characters array contains the character ID
-        if (film.characters.includes(`https://swapi-api.alx-tools.com/api/people/${characterId}/`)) {
-            count++;
-        }
+    for (const film of data.results) {
+        // Fetch the character data for the film
+        request.get(film.url, function(error, response, body) {
+            if (!error && response.statusCode === 200) {
+                const filmData = JSON.parse(body);
+                if (filmData.characters.includes(`https://swapi-api.alx-tools.com/api/people/${characterId}/`)) {
+                    count++;
+                }
+            }
+        });
     }
 
-    console.log(count);
+    // Use a setTimeout to wait for all requests to complete before printing the count
+    setTimeout(() => {
+        console.log(count);
+    }, 1000); // Wait for 1 second (adjust as needed)
 });
