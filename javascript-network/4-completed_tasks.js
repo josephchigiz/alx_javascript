@@ -14,7 +14,7 @@ request(apiUrl, (error, response, body) => {
 
     const toDoTasks = JSON.parse(body);
 
-    const completedTasks = new Map;
+    const completedTasks = {};
 
 
     // toDoTasks.forEach((todo) => {
