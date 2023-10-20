@@ -19,7 +19,7 @@ request.get(apiUrl, (error, response, body) => {
     if (film.characters.length === 0) {
         console.log(movieId);
     } else {
-        console.log(film.title);
+    //     console.log(film.title);
         film.characters.forEach((characterUrl) => {
             const characterId = characterUrl.split('/').slice(-2, -1)[0];
 
