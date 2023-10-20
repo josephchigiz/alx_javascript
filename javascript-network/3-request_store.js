@@ -4,4 +4,4 @@ const fs = require('fs');
 
 const url = process.argv[2];
 
-request.get(url).pipe(fs.createReadStream('loremipsum.html'))
+request.get(url).pipe(fs.createWriteStream('loremipsum.html'))
