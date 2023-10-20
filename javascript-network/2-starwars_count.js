@@ -1,7 +1,9 @@
 const request = require('request');
 
 const url = process.argv[2];
-request.get(url, function(error, response, body) {
+const id = "18";
+
+request.get(url, (error, response, body) => {
     if (error) {
         console.error(`Error: ${error}`);
         return;
@@ -13,7 +15,7 @@ request.get(url, function(error, response, body) {
     // this script prints No. of movies he was in
     // const films= JSON.parse(body).results;
     const films= JSON.parse(body).results;
-    const id = "18";
+    // const id = "18";
     let count = 0;
 
     //Iterate film by film
