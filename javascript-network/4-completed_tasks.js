@@ -16,6 +16,7 @@ request(apiUrl, (error, response, body) => {
 
     const completedTasks = new Map;
 
+
     // toDoTasks.forEach((todo) => {
     //     if (todo.completed) {
     //         if (completedTasks.has(todo.userId)) {
@@ -32,6 +33,7 @@ request(apiUrl, (error, response, body) => {
                 completedTasks[userId]++;
             } else {
                 completedTasks[userId] = 1;
+
             }
         }
     });
@@ -40,4 +42,5 @@ request(apiUrl, (error, response, body) => {
     //     console.log(`${userId}: ${completedCount}`);
     // });
     console.log(completedTasks);
+
 });
