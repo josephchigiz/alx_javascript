@@ -6,4 +6,4 @@ const url = process.argv[2];
 const fileName = 'loremipsum.html';
 
 const filePath = path.join(__dirname, fileName);
-request.get(url).pipe(fs.createWriteStream(filePath))
+request.get(url).pipe(fs.createWriteStream(filePath));
